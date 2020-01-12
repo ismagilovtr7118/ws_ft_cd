@@ -1,0 +1,19 @@
+version: "3"
+networks:
+    mynetwork:
+services:
+    web:
+        build: ./project
+        networks:
+            - mynetwork 
+        container_name: web
+        environment:
+            - FTPATH='./fastText/'
+            - MODELNAME='model_FT.bin'
+        expose:
+            - "5000"
+        ports:
+            - "5000:5000"
+        volumes:
+            - /home/tim/workspace/project_web_serv/models:/opt/fastText
+

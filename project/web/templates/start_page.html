@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+    <form action="{{ url_for('start_page') }}" method="post">
+    <textarea cols="50" rows="5" name="text1" required="True" style="resize: none;"></textarea><br>
+    <textarea cols="50" rows="5" name="text2" required="True" style="resize: none;"></textarea><br>
+    <button style="width:100x;height:75px" type="submit" name="submit_bt">Определить схожесть</button>
+    </form>
+ {% endblock %}
+

@@ -1,0 +1,26 @@
+<!doctype html>
+{% extends "layout.html" %}
+{% block body %}
+{% if prev_page %}
+    <a href="{{ prev_page }}">Previous page</a>
+{% endif %}
+{% if next_page %}
+    <a href="{{ next_page }}">Next page</a>
+{% endif %}
+<table>
+    <tr>
+        <td> id </td> 
+        <td> text1 </td>
+        <td> text2 </td>
+        <td> cos dist </td>
+    </tr>
+    {% for record in records %}
+        <tr>
+        <td>{{record.id}}</td>
+        <td>{{record.text1}}</td>
+        <td>{{record.text2}}</td>
+        <td>{{record.cos_dist}}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}

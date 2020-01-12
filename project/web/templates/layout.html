@@ -1,0 +1,18 @@
+<!doctype html>
+<title>Task web service</title>
+<div>
+    Task web service:
+    <a href="/">/</a>
+    <a href="/history">History</a>
+    <a href="/similarities">Similarities</a>
+</div>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <h3>{{ message }}</h3>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}

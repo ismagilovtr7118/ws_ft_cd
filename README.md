@@ -1,5 +1,11 @@
 # ws_ft_cd
-web service using [fastText](https://fasttext.cc/) to calculate the cosine distance between two texts
+web service using [fastText](https://github.com/facebookresearch/fastText) to calculate the cosine distance between two texts in Russian
+
+## Содержание
+
+* [Что может](#Что может)
+* [Что используется для работы](#Что используется для работы)
+* [Инструкций по установке](#Инструкций по установке)
 
 ## Что может
 * "/"
@@ -14,4 +20,21 @@ web service using [fastText](https://fasttext.cc/) to calculate the cosine dista
    * PUT - редактирование запроса косинусного расстояния с <similarity_id>: text1, text2 - новое расстояние высчитывается, в ответ приходит измененный объект в виде json, новый запрос записывается в базу данных на позицию <similarity_id>
    * DELETE - удаление запроса косинусного расстояния с <similarity_id>. Возвращает сообщение о успешно выполненной операции
 
+## Что используется для работы
+* Python3
+   * Flask
+   * numpy
+   * scipy
+   * psycopg2
+* PostgreSQL
+* Docker
+* [fastText](https://github.com/facebookresearch/fastText)
+* [Модели для русского языка](http://docs.deeppavlov.ai/en/master/intro/pretrained_vectors.html#id2)
+
+## Инструкций по установке
+Клонируем данный репозиторий и переходим в него
+```
+$ git clone https://github.com/ismagilovtr7118/ws_ft_cd.git
+$ cd ws_ft_cd/
+```
 

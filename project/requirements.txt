@@ -2,3 +2,5 @@ numpy
 Flask
 scipy
 psycopg2
+fasttext
+peewee

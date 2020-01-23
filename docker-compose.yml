@@ -8,12 +8,24 @@ services:
             - mynetwork 
         container_name: web
         environment:
-            - FTPATH='./fastText/'
-            - MODELNAME='model_FT.bin'
+            - MODELNAME=model_FT.bin
         expose:
             - "5000"
         ports:
             - "5000:5000"
         volumes:
-            - /home/tim/workspace/project_web_serv/models:/opt/fastText
-
+            - ./models:/opt/fastText
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: 123456
+            POSTGRES_DB: query_results_db
+        volumes:
+            - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+            - ./dbDir:/var/lib/postgresql/data
+        expose:
+            - "5432"
+        ports:
+            - "5432:5432"

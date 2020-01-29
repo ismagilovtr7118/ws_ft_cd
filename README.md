@@ -55,11 +55,11 @@ $ cd ws_ft_cd/
 
 ### Установка fastText
 
-Описан в зависимостях, устанавливается автоматически.
+fastText описан в зависимостях, устанавливается автоматически.
 
 ### Установка и настойка PostgreSQL
 
-Собирается docker-compose из [официального образа postgresql на docker hub] 
+Собирается docker-compose из [официального образа postgresql на docker hub](https://hub.docker.com/_/postgres) 
 
 ### Создание Базы данных и таблицы
 
